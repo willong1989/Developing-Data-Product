@@ -1,0 +1,27 @@
+---
+title: "Developing Data Product Week2"
+author: "Huilong"
+date: "December 30, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(leaflet)
+```
+
+
+```{r}
+#Plot my map
+my_map <- leaflet() %>%
+addTiles()
+
+Willis_Tower <- c("<a href= 'https://www.willistower.com/' >Willis Tower</a>")
+leaflet() %>%
+addTiles() %>%
+addMarkers(lat=41.878876, lng=-87.635918, popup = Willis_Tower)
+```
